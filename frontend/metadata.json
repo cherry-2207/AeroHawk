@@ -1,0 +1,5 @@
+{
+  "name": "AeroHawk - Aerial Object Classification",
+  "description": "A responsive frontend interface for an AI model that classifies aerial objects as birds or drones. Upload an image to see the CNN-based model in action.",
+  "requestFramePermissions": []
+}

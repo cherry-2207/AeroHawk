@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AeroHawk - Aerial Object Classification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#8B5CF6', // violet-500
+              'brand-secondary': '#7C3AED', // violet-600
+              'brand-light': '#C4B5FD', // violet-300
+              'brand-dark': '#5B21B6', // violet-800
+              'brand-text': '#E5E7EB', // Gray-200
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            keyframes: {
+              fadeInUp: {
+                'from': { opacity: 0, transform: 'translate3d(0, 20px, 0)' },
+                'to': { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+              },
+              fadeIn: {
+                'from': { opacity: 0 },
+                'to': { opacity: 1 },
+              },
+              aurora: {
+                'from': { backgroundPosition: '0% 50%' },
+                'to': { backgroundPosition: '100% 50%' },
+              },
+              shimmer: {
+                '0%, 100%': { opacity: 0, transform: 'scale(0.5)' },
+                '50%': { opacity: 1, transform: 'scale(1)' },
+              },
+              'pulse-border': {
+                '0%, 100%': { 'border-color': 'rgba(139, 92, 246, 0.4)' },
+                '50%': { 'border-color': 'rgba(139, 92, 246, 0.8)' },
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+              'aurora': 'aurora 20s ease-in-out infinite alternate',
+              'shimmer': 'shimmer 3s ease-in-out infinite',
+              'pulse-border': 'pulse-border 2s ease-in-out infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-brand-text font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
